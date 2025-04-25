@@ -67,3 +67,5 @@ Comandos random con cierta utilidad
 git restore //Restaura tus archivos a como estaban en el ultimo commit en tu rama local (NO USAR SI TIENES CAMBIOS EN TUS ARCHIVOS, SOLAMENTE SI DESHACER CAMBIOS).
 
 git clean -fd //Borra todos los archivos nuevos creados que no estaban en el último commit, al igual que el anterior, no usar si tienes cambios y no quieres deshacerlos.
+
+ola
