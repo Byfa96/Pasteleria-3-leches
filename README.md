@@ -28,6 +28,7 @@ el punto significa añadir todo
 * Para verificar que cambios hay añadido debes hacer un git status y si se añadio algo que no querías puedes hacer un git reset
 
 * Si te sientes conforme, debes hacer un git commit -m 'Mensaje explicando los cambios'
+
 ---
 
 ## IMPORTANTE
@@ -47,11 +48,19 @@ Ejemplo con ramas inventadas main y rama1
 
 git branch (para verificar tu rama actual)
 
-git checkout main
-git pull origin main
-git checkout rama1
-git merge main
-git checkout main
-git merge rama1
+- git checkout main  
+- git pull origin main  
+- git checkout rama1  
+- git merge main  
+- git checkout main  
+- git merge rama1  
 
 Ese sería el proceso
+
+---
+
+Comandos random con cierta utilidad
+
+git restore //Restaura tus archivos a como estaban en el ultimo commit en tu rama local (NO USAR SI TIENES CAMBIOS EN TUS ARCHIVOS, SOLAMENTE SI DESHACER CAMBIOS).
+
+git clean -fd //Borra todos los archivos nuevos creados que no estaban en el último commit, al igual que el anterior, no usar si tienes cambios y no quieres deshacerlos.
