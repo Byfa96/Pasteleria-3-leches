@@ -20,7 +20,6 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('apps.core.urls')),
-    path ('test/', views.test_view, name='test_view'), #Pagina de pruebas
     path('api-auth/', include('rest_framework.urls')),
 
 ]
