@@ -179,3 +179,10 @@ cython_debug/
 /env
 /venv
 .venv
+
+#Custom
+*.pyc
+
+#Carpetas de imagenes temporales
+
+/pasteles
