@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>Gestión de Pruebas</title>
+    <link rel="stylesheet" href="{% static 'css/prueba.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Pruebas</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn">Agregar</button>
+        </form>
+
+        <hr>
+
+        <ul class="lista">
+            {% for prueba in pruebas %}
+                <li>
+                    <strong>{{ prueba.nombre }}</strong>: {{ prueba.descripcion }}
+                    <a href="{% url 'prueba_update' prueba.id %}">Editar</a>
+                    <a href="{% url 'prueba_delete' prueba.id %}" onclick="return confirm('¿Eliminar este registro?')">Eliminar</a>
+                </li>
+            {% empty %}
+                <li>No hay registros aún.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

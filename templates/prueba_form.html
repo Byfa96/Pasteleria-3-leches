@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    
+    <title>Editar Prueba</title>
+    <link rel="stylesheet" href="{% static 'css/prueba.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Editar Prueba</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn">Guardar</button>
+        </form>
+        <a href="{% url 'prueba_create' %}">← Volver</a>
+    </div>
+</body>
+</html>
