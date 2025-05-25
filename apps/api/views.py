@@ -7,6 +7,7 @@ from .forms import PruebaForm
 
 class PastelViewSet(viewsets.ModelViewSet):
     queryset = Pastel.objects.all()
+    serializer_class = PastelSerializer
 
 #Se crea el viewset de pruebas junto con la vista de prueba, para
 # confirmar que funca el metodo de las url para crear css personalizado
